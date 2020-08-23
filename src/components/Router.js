@@ -8,7 +8,7 @@ function Router() {
     <BrowserRouter>
       <Switch>
         <Route path="/" component={App} exact />
-        <Route path="/recipe" component={Recipe} />
+        <Route path="/recipe/:label" component={Recipe} />
       </Switch>
     </BrowserRouter>
   )

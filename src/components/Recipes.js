@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Recipes(props) {
   return (
@@ -30,7 +31,15 @@ function Recipes(props) {
                       <span> {recipe.recipe.source} </span>
                     </p>
                   </div>
-                  <button className="recipe_buttons"> View </button>
+                  <button className="recipe_buttons">
+                    <Link to={{
+                      pathname: `/recipe/${recipe.recipe.label}`,
+                      state: { recipe: recipe.recipe.label }
+                    }}
+                    >
+                      View
+                    </Link>
+                  </button>
                 </div>
               </div>
             )

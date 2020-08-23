@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-function Recipe() {
-  return (
-    <div>
-      Recipe
-    </div>
-  )
+class Recipe extends Component {
+  render() {
+    console.log(this.props)
+    return (
+      <div>
+        Recipe
+      </div>
+    )
+  }
 }
 
 export default Recipe
